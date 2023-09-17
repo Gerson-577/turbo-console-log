@@ -1,17 +1,18 @@
 {
-  "name": "turbo-console-log",
-  "displayName": "Turbo Console Log",
-  "description": "Automating the process of writing meaningful log messages.",
-  "version": "2.9.6",
-  "publisher": "ChakrounAnas",
+  "name": "turbo-console-log-modify",
+  "displayName": "Turbo Console Log（clipboard log）",
+  "description": "modified from turbo Console,add clipboard log(javascript, typescript）",
+  "version": "2.9.7",
+  "publisher": "gerson577",
   "engines": {
     "vscode": "^1.50.0"
   },
-  "icon": "images/icon.png",
+  "icon": "images/icon.jpg",
   "categories": [
     "Other"
   ],
   "activationEvents": [
+    "onCommand:turboConsoleLog.clipboardLogMessage",
     "onCommand:turboConsoleLog.displayLogMessage",
     "onCommand:turboConsoleLog.commentAllLogMessages",
     "onCommand:turboConsoleLog.uncommentAllLogMessages",
@@ -104,6 +105,10 @@
     },
     "commands": [
       {
+        "command": "turboConsoleLog.clipboardLogMessage",
+        "title": "Turbo Console Log: clipboard Log Message"
+      },
+      {
         "command": "turboConsoleLog.displayLogMessage",
         "title": "Turbo Console Log: Display Log Message"
       },
@@ -121,6 +126,11 @@
       }
     ],
     "keybindings": [
+      {
+        "command": "turboConsoleLog.clipboardLogMessage",
+        "key": "ctrl+alt+v",
+        "mac": "ctrl+alt+v"
+      },
       {
         "command": "turboConsoleLog.displayLogMessage",
         "key": "ctrl+alt+l",
